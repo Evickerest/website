@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: rgb(230, 242, 241); */
+    background-color: white;
+
+
+}
+    
+li, a, button {
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    font-size: 2rem;
+}
+span:first-child {
+    color: rgb(0, 192, 240);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(248, 249, 250);
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-list li {
+    padding: 0px 20px;
+    font-size: 0.75rem;
+}
+
+.nav-list li a {
+    transition: all 0.3s ease 0s;
+    font-size: 1.75rem;
+    padding: 0.75rem;
+    border-radius: 10%;
+}
+
+.nav-list li a:hover {
+    /* background-color: #3a3d3d; */
+    color: red;
+    text-decoration: underline;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgb(0, 192, 240);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0,136,169,0.5);
+}
+
+
+section {
+    display: grid;
+
+}
+
+.inner-section {
+    display: grid;
+    grid-template-columns: [content-start] 10rem [text-start] 1fr [text-end] 1fr [picture-start] 1fr [picture-end] 1fr [content-end];
+    grid-template-rows: [content-start] 10vh [picture-start] 40px [text-start] 20vw [text-end] 1fr [background-end] 1fr [picture-end] 1fr [content-end];
+    background-color: rgb(230, 242, 241);
+}
+
+
+.introduction {
+    grid-column-start: text-start;
+    grid-column-end: text-end;
+    grid-row-start: text-start;
+    grid-row-end: text-end;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+}
+
+.introduction h1 {
+    color: red;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10rem;  
+}
+
+.introduction h3 {
+    color: black;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.img {
+    width: 400px;
+    grid-column-start: picture-start;
+    grid-column-end: picture-end;
+    grid-row-start: picture-start;
+    grid-row-end: picture-end;
+
+    border: 10px solid white;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .inner-section {
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+        flex-direction: column;
+    }
+  }
+
+.tri-fold {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+  
