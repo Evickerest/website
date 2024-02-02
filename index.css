@@ -84,6 +84,9 @@ section {
     grid-template-columns: [content-start] 10rem [text-start] 1fr [text-end] 1fr [picture-start] 1fr [picture-end] 1fr [content-end];
     grid-template-rows: [content-start] 10vh [picture-start] 40px [text-start] 20vw [text-end] 1fr [background-end] 1fr [picture-end] 1fr [content-end];
     background-color: rgb(230, 242, 241);
+
+    /* background-image: linear-gradient(rgb(230, 242, 241), #e0e5e9); */
+    /* background-image: linear-gradient(rgb(230, 242, 241), #e0e5e9); */
 }
 
 
@@ -137,6 +140,7 @@ section {
     display: flex;
     flex-direction: row;
     background-color: #e0e5e9;
+    /* background-image: linear-gradient(#e0e5e9, rgb(230, 242, 241) ); */
     padding: 2rem;
 }
 

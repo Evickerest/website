@@ -59,14 +59,58 @@ header {
     text-decoration: underline;
 }
 
+section {
+    /* padding: 4rem; */
+    display: grid;
+    grid-template-columns: [left-column-start] 1fr [right-column-start] 1fr;
+    grid-template-rows: [title blurb-start] 5rem [content-start] 1fr [blurb-end] 1fr [content-end] 1fr;
+
+    padding: 5rem;
+}
 
 .inner-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+
+    grid-row-start: content-start;
+    grid-row-end: content-end;
+    grid-column-start: left-column-start;
+    grid-column-end: right-column-start;
 }
+
+.title {
+    grid-row-start: title;
+    grid-row-end: content-start;
+    grid-column-start: left-column-start;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.title h1 {
+    text-decoration: underline;
+    font-size: 5rem;
+}
+
+
+.blurb {
+    grid-row-start: blurb-start;
+    grid-row-end: blurb-end;
+    grid-column-start: right-column-start;
+}
+
 
 .card {
     border: 2px solid black;
     padding: 5rem;
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+.heading {
+    border-left: 3px solid black;
+    padding: 0.5rem;
 }
