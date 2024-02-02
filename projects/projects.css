@@ -62,15 +62,17 @@ header {
 section {
     /* padding: 4rem; */
     display: grid;
-    grid-template-columns: [left-column-start] 1fr [right-column-start] 1fr;
+    grid-template-columns: [left-column-start] 3fr [right-column-start] 1fr;
     grid-template-rows: [title blurb-start] 5rem [content-start] 1fr [blurb-end] 1fr [content-end] 1fr;
 
     padding: 5rem;
 }
 
-.inner-section {
+.card-container {
     display: flex;
     flex-direction: column;
+
+    row-gap: 1rem;
 
     grid-row-start: content-start;
     grid-row-end: content-end;
@@ -85,7 +87,7 @@ section {
 
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .title h1 {
@@ -100,14 +102,41 @@ section {
     grid-column-start: right-column-start;
 }
 
+.blurb h2 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid black
+}
+
+
 
 .card {
-    border: 2px solid black;
-    padding: 5rem;
+    /* padding: 5rem; */
+    padding: 1rem;
+    max-width: 80%;
+    box-shadow: 10px 5px 5px darkgrey;
 
     display: flex;
     flex-direction: row;
     column-gap: 1rem;
+    border-left: 25px solid rgb(78, 76, 76);
+
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+
+    transition: all ease 0.5s;
+
+    position: relative;
+}
+
+.card:hover {
+    transform: translateX(100px);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 20%;
 }
 
 .heading {
