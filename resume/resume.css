@@ -96,3 +96,23 @@ button a:hover {
     color: red;
     text-decoration: underline;
 }
+
+#title h1 {
+    font-size: 10rem;
+    color: red;
+
+    margin-bottom: 1rem;
+}
+
+#title h3 {
+    color: black;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

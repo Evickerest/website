@@ -62,10 +62,33 @@ header {
 section {
     /* padding: 4rem; */
     display: grid;
-    grid-template-columns: [left-column-start] 3fr [right-column-start] 1fr;
+    grid-template-columns: [left-column-start] 500px [right-column-start] 200PX [right-column-end];
     grid-template-rows: [title blurb-start] 5rem [content-start] 1fr [blurb-end] 1fr [content-end] 1fr;
 
-    padding: 5rem;
+    padding: 10rem;
+    padding-top: 0;
+
+    justify-content: center;
+
+}
+
+.divider {
+    content: "";
+
+    position: relative;
+    top: 50px;
+    
+    height: 8px;
+    background-color: black;
+
+    width: 80vw;
+
+    grid-column-start: left-column-start;
+    grid-column-end: right-column-end;
+    grid-row-start: title;
+
+    display:none;
+
 }
 
 .card-container {
@@ -78,6 +101,9 @@ section {
     grid-row-end: content-end;
     grid-column-start: left-column-start;
     grid-column-end: right-column-start;
+
+    border-top: 8px solid black;
+    padding: 1rem;
 }
 
 .title {
@@ -88,19 +114,44 @@ section {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
+
+   
 }
 
 .title h1 {
-    text-decoration: underline;
-    font-size: 5rem;
+    /* text-decoration: underline; */
+    font-size: 1.75rem;
+
+    position: relative;
 }
 
 
 .blurb {
-    grid-row-start: blurb-start;
+    grid-row-start: content-start;
     grid-row-end: blurb-end;
     grid-column-start: right-column-start;
+
+    border-top: 8px solid black;
+    padding-top: 1rem;
 }
+
+.blurb-title {
+    grid-row-start: title;
+    grid-row-end: content-start;
+    grid-column-start: right-column-start;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.blurb-title h1 {
+    /* text-decoration: underline; */
+    font-size: 1.75rem;
+
+    position: relative;
+}
+
 
 .blurb h2 {
     margin-bottom: 1rem;
@@ -112,16 +163,16 @@ section {
 .card {
     /* padding: 5rem; */
     padding: 1rem;
-    max-width: 80%;
+    max-width: 90%;
     box-shadow: 10px 5px 5px darkgrey;
 
     display: flex;
     flex-direction: row;
     column-gap: 1rem;
-    border-left: 25px solid rgb(78, 76, 76);
+    border-left: 25px solid  rgb(0, 192, 240);
 
     border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    /* border-top: 1px solid rgb(0, 192, 240); */
 
     transition: all ease 0.5s;
 
@@ -129,7 +180,7 @@ section {
 }
 
 .card:hover {
-    transform: translateX(100px);
+    transform: translateX(30px);
 }
 
 .card img {
@@ -137,6 +188,9 @@ section {
     height: 100px;
 
     border-radius: 20%;
+
+    object-fit: none;
+    object-position: 86% 0;
 }
 
 .heading {
