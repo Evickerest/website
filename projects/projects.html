@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="projects.css">
+    <script src="projects.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -19,47 +20,59 @@
             </ul>
         </nav>
     </header>
+    <div id="title">
+        <h1>Projects</h1>
+        <h3>Here is my projects.</h3>
+    </div>
     <section>
-        <div class="title">
-            <h1>Projects</h1>
-        </div>
-        <div class="divider"></div>
-        <div class="card-container">
-            <div class="card">
-                <img src="https://source.unsplash.com/random/125x125?sig=1" alt="">
-                <div class="heading">
-                    <h1>Website</h1>
-                    <div>Feb.2024</div>
-                </div>
+        <div class="card-section">
+            <div class="main-card">
+                <h1>Minesweeper</h1>
+                <div>Variations on the classic Minesweeper game.</div>
             </div>
-           <div class="card">
-                <img src="/projects/images/Screenshot 2023-11-24 191636.png" alt="">
-                <a href="minesweeper/classic.html"><div class="heading">
+            <div class="sub-card-section">
+                <a href="minesweeper/classic.html"><div class="sub-card">
                     <h1>Classic Minesweeper</h1>
-                    <div>Feb.2024</div>
+                    <div>Normal minesweeper.</div>
                 </div></a>
-            </div>
-            <div class="card">
-                <img src="https://source.unsplash.com/random/125x125?sig=3" alt="">
-                <div class="heading">
-                    <h1>Website</h1>
-                    <div>Feb.2024</div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://source.unsplash.com/random/125x125?sig=4" alt="">
-                <div class="heading">
-                    <h1>Website</h1>
-                    <div>Feb.2024</div>
+                <div class="sub-card">
+                    <h1>Multi Flag Minesweeper</h1>
+                    <div>Mines aren't content with just single tiles. A tile can have up to 8 mines now.</div>
                 </div>
             </div>
         </div>
-        <div class="blurb-title">
-            <h1>Info</h1>
+        <div class="card-section">
+            <div class="main-card">
+                <h1>Robotics</h1>
+                <div>All of my projects regarding the Demons 858 Robotics Team.</div>
+            </div>
+            <div class="sub-card-section">
+                <div class="sub-card">
+                    <h1>Scouting Application</h1>
+                    <div>Web application to store data from other robots at competitions.</div>
+                </div>
+            </div>
         </div>
-        <div class="blurb">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum accusamus libero ea officia illum commodi est sed ipsam maxime debitis eum, nesciunt impedit saepe, velit, vel corporis consequuntur expedita autem obcaecati exercitationem recusandae similique quas ab? Quasi porro non nihil. Dicta nihil praesentium voluptas eligendi minus nam fugit, labore magnam dolore doloribus error laudantium accusamus maxime voluptate sint pariatur consectetur eaque fugiat aperiam non adipisci dolor. Distinctio, laboriosam? Repellat blanditiis sequi voluptatibus, repudiandae fugiat qui corrupti accusamus! Ipsum harum quos id, placeat corrupti quia natus. Magni consequuntur impedit voluptatibus atque fugiat neque, inventore, dolorem, animi est earum iure amet at suscipit illum dolorum hic quo eligendi. Dicta ut tenetur necessitatibus ad sunt explicabo minus quaerat veniam rerum minima vero est mollitia sit delectus, tempora beatae provident aut id fugit incidunt cum laudantium suscipit. Repellendus dolores hic tempora consequuntur quae dignissimos, alias itaque optio aliquid laudantium officia ullam possimus debitis commodi.
+        <div class="card-section">
+            <div class="main-card">
+                <h1>Other</h1>
+                <div>Bunch of random projects with no unifying theme.</div>
+            </div>
+            <div class="sub-card-section">
+                <div class="sub-card">
+                    <h1>Header</h1>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam.</div>
+                </div>
+                <div class="sub-card">
+                    <h1>Header</h1>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam.</div>
+                </div>
+            </div>
         </div>
     </section>
+    <div class="project-preview-container">
+        <img class="image-preview" src="" alt="">
+    </div>
+  
 </body>
 </html>
