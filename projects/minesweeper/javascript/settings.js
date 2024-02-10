@@ -36,6 +36,10 @@ const flagColor = document.querySelector("#flag-color");
 
 const displayBorder = document.querySelector("#display-border");
 const borderColor = document.querySelector("#border-color");
+
+const displayFlagBorder = document.querySelector("#display-flag-border");
+const borderFlagColor = document.querySelector("#flag-border-color");
+
 const borderSize = document.querySelector("#bordrr-size");
 
 const firstOpenSize = document.querySelector("#first-open-size");
@@ -145,6 +149,11 @@ submitModal.addEventListener("click", () => {
 
     document.documentElement.style.setProperty('--border-color', borderColor.value);
     DisplayBorder = displayBorder.checked;
+
+    document.documentElement.style.setProperty('--flag-border-color', borderFlagColor.value);
+    DisplayFlagBorder = displayFlagBorder.checked;
+
+
 
     widthOfOpenSpace = firstOpenSize.value;
    

@@ -198,7 +198,7 @@ function adjustTileBorders(tile){
                 }
             }
         }
-    } else if( !tile.flag && !tile.clicked){
+    } else if( !tile.flag && !tile.clicked && DisplayFlagBorder){
         for( var i = -2; i < 2; i++){
             xAd = x+((i+1) % 2);
             yAd = y+i%2;

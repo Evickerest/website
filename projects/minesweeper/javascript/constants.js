@@ -7,6 +7,7 @@ let GameOver = false;
 let tilesClicked = 0;
 let isSettingsShowing = false;
 let DisplayBorder = true;
+let DisplayFlagBorder = true;
 
 // DOM elements
 const customWidthBox = document.querySelector("#custom-width");

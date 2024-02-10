@@ -1,13 +1,9 @@
-// cardSections = document.querySelectorAll(".card-section");
+const subCards = document.querySelectorAll(".sub-card");
 
-// cardSections.forEach( cardSection => {
-    
-//     cardSection.addEventListener( "click", () => {
-//         subCardContent = cardSection.querySelector(".sub-card-section");
-//         if( subCardContent.hasAttribute("show") ) {
-//             subCardContent.removeAttribute("show");
-//         } else {
-//             subCardContent.setAttribute("show","");
-//         }
-//     });
-// });
+const imagePreview = document.querySelector("#image-preview");
+
+subCards.forEach( card => {
+    card.addEventListener("mouseover", () => {
+        imagePreview.setAttribute("src", card.dataset.image);
+    });
+});
