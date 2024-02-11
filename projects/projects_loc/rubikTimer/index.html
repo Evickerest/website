@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2 class="scramble">A</h2>
+    <h1 class="timer">0</h1>
+    <b>Times:</b>
+    <div class="times-wrapper">
+        <div class="times-scroller">
+            <table class="times-table">
+                <tr>
+                    <th>Solve</th>
+                    <th>Time</th>
+                </tr>
+            </table>
+        </div>
+    </div>   
+    <dialog class="time-modal" data-solve>
+        <h1>Solve: </h1>
+        <div class="solve-time"></div>
+        <div class="solve-scramble"></div>
+        <button class="buttons close">Close</button>
+        <button class="buttons" id="plustwo">+2</button>
+        <button class="buttons" id="delete">X</button>
+    </dialog>
+
+    <dialog class="scramble-modal">
+        <h1>Scramble Settings:</h1>
+        <div class="wrapper">
+            <div class="scramble-text-buttons" id="last-scramble">Last Scramble</div>
+            <div class="scramble-text-buttons" id="next-scramble">Next Scramble</div>
+        </div>
+        <label>Scramble Length:</label>
+        <input id="scramble-length" type="number" value=20>
+        <br><br>
+        <div class="button-wrapper">
+            <button class="buttons" id="confirm">Confirm</button>
+            <button class="buttons" id="close">Close</button>
+        </div>
+    </dialog>
+
+    <button id="save">Save Data</button>
+    <button id="display">Display Data</button>
+</body>
+</html>

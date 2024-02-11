@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            max-width: 400px;
+        }
+        button {
+            background-color: lime;
+            padding: 1rem;
+            border-radius: 10%;
+        }
+        button:hover {
+            background-color: rgb(18, 203, 18);
+        }
+        #text {
+            height: 50px;
+        }
+        #size {
+            max-width: 50px;
+        }
+        #speed {
+            max-width: 50px;
+        }
+        .text-container {
+            display: flex;
+            justify-content: center;
+            height: 80vh;
+            align-items: center;
+            font-size: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <input type="text" id="text"></input>
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+        </div>
+        <div class="row">
+            <label>Text Size (px): </label>
+            <input id="size" type="number" value="200" input>
+            <label>Text Speed (wpm): </label>
+            <input id="speed" type="number" value="200"></input>
+        </div>
+    </div>
+    <div class="text-container">
+        lorem
+    </div>
+    <script>
+        const startButton = document.querySelector("#start");
+        const pauseButton = document.querySelector("#pause");
+        const textInputBox = document.querySelector("#text");
+        const textSizeBox = document.querySelector("#size");
+        const textSpeedBox = document.querySelector("#speed");
+        const displayedText = document.querySelector(".text-container");
+
+        textSpeed = 200; //wpm
+        text = [];
+        isNotPaused = true;
+        notStarted = true;
+
+        //this event fires when the text input is unfocused, or clicked off of
+        textSizeBox.addEventListener("focusout", ()=> {
+            displayedText.style.fontSize = textSizeBox.value + "px";
+        });
+
+        //in units of px
+        textSpeedBox.addEventListener("focusout", ()=> {
+            textSpeed = parseInt(textSpeedBox.value);
+            clearTextInterval();
+            startTextInterval();
+        });
+        n = 0;
+        textInputBox.addEventListener("focusout", ()=> {
+            text = [];
+            tempString = textInputBox.value;
+            text = tempString.split(" ");
+        })
+        
+        startButton.addEventListener("click", ()=> {
+           startTextInterval();
+        });
+        pauseButton.addEventListener("click", ()=> {
+          clearTextInterval();
+        });
+        
+        function startTextInterval(){
+            a =  setInterval( changeText, WPMToMilliseconds());
+           notStarted = false;
+        }
+
+        function clearTextInterval(){
+           if( notStarted) return;
+           clearInterval(a);
+           isNotPause = false;
+        }
+
+        function WPMToMilliseconds(){
+            return 60000 / textSpeed;
+        }
+
+        function changeText(){
+            if( text.length == 0) return;
+            displayedText.textContent = text.shift();
+        }
+
+    </script>
+</body>
+</html>
+
