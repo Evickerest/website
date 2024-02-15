@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(230, 242, 241);
+    /* background-color: white; */
+}
+
+
+li, a, button {
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    font-size: 2rem;
+}
+.logo span:first-child {
+    color: rgb(0, 192, 240);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(248, 249, 250);
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+
+.nav-list li {
+    padding: 0px 20px;
+    font-size: 0.75rem;
+}
+
+.nav-list li a {
+    transition: all 0.3s ease 0s;
+    font-size: 1.75rem;
+    padding: 0.75rem;
+    border-radius: 10%;
+}
+
+.nav-list li a:hover {
+    /* background-color: #3a3d3d; */
+    color: red;
+    text-decoration: underline;
+}
+
+
+section {
+    /* --content-margin: 8vw; */
+
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 8vw [title-start] 4vw [breakout-start] 10vw [text-start] 1fr [text-end] 10vw [breakout-end] 4vw [title-end] 8vw;
+}
+
+.title {
+    grid-column-start: title-start;
+    grid-column-end: title-end;
+    /* grid-row-start: text-start; */
+}
+
+.title h1 {
+    font-size: 3rem;
+}
+
+p {
+    grid-column: text;
+    font-size: 1.25rem;
+    /* font-family: "Roboto", sans-serif; */
+    margin: 1rem;
+    line-height: 2rem;
+}
+
+.breakout {
+    grid-column: breakout;
+}
+
+.title hr {
+    margin-top: 1rem;
+    border-top: 2px solid black;
+    margin-bottom: 1rem;
+}
+
+.media-content {
+    display: grid;
+    place-items: center;
+    margin-bottom: 1.75rem;
+    grid-column: breakout;
+    padding: 2rem;
+}
+
+img {
+    max-height: 500px;
+}
+
+.column-text {
+    grid-column: breakout;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    max-width: 80vw;
+}
+
+.math-container {
+    margin: 1rem;
+    grid-column: breakout;
+    background-color: white;
+    border: 2px solid black;
+    padding: 1rem;
+    color: black;
+}
+
+ul {
+    grid-column: text;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+}
+
+li {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.gallery img {
+    max-width: 200px;
+}
+
+mjx-mtr {
+    line-height: 1rem;
+}
