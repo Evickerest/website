@@ -36,7 +36,7 @@
             <hr>
         </div>
         <p>
-            I always been fascinated with the possibilities of modular origami. This subset of the hobby combines the "softness" of origami with rigid mathematical implications. The modular units I use are called the "Sonobe Module".
+            I have always been fascinated with the possibilities of modular origami. This subset of the hobby combines the "softness" of origami with rigid mathematical implications. The modular units I use are called the "Sonobe Module".
         </p>
         <p>
             To construct a sonobe unit, watch this video.
@@ -51,10 +51,10 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/TKGW2W168H0?si=QtI8peuit1noDCRg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div> -->
         <p>
-            Sonobe units have slots in them that allow for the ends of other units to be inserted. This is how the modular design starts. From here, depending on how you put together and fold the underlying unit, many shapes can arise. However, I will be focusing on the Menger Sponge.
+            Sonobe units have slots in them that allow for the ends of other units to be inserted. This is how the modular design starts. From here, depending on how you put together and fold the underlying unit, many shapes can arise. However, I will be focusing on the menger sponge.
         </p>
         <p>
-            The menger sponge is a fractal that is constructed from a solid cube, and then popping holes into the center. And then, you subdivide each side of the cube into 8 sections, and then pop holes in the middle in each cube section, and then repeat.
+            The menger sponge is a fractal that is constructed from a solid cube, and then popping holes into the center. And then, you subdivide each side of the cube into 8 sections, and then pop holes in the middle of the new sections, and then repeat.
         </p>
         <div class="media-content">
             <img src="/imgs/menger_sponge_diagram.jpg" alt="">
@@ -64,13 +64,13 @@
         </p>
 
         <p>
-            Level 0 of the Fractal (or just a cube), requires only 6 units. The initial size of the origami paper determines the size of the resulting cube. 
+            Level 0 of the fractal (or just a cube), requires only 6 units. The initial size of the origami paper determines the size of the resulting cube. 
         </p>
         <div class="media-content">
             <img src="/imgs/IMG_1610.JPG" alt="">
         </div>
         <p>
-            Level 0 of the fractal (or just a cube), requires only 6 units. The initial size of the origami paper determines the size of the resulting cube. If you fold and unfold it, you can easily calculate the side length using the Pythagorean Theorem. 
+            Level 0 of the fractal (or just a cube), requires only 6 units. If you fold and unfold a unit, you will be able to see a diamond. From there, you can easily calculate the side length using the Pythagorean Theorem. 
         </p>
         <div class="media-content">
             <img src="/imgs/unit_diagram.png" alt="hi">
@@ -80,8 +80,8 @@
         </p> 
         <div class="math-container">
             <p><span class="math display">\[\begin{split}
-                (\frac{x}{4})^2 + (\frac{x}{4})^2 &amp;= l^2 \\
-                2(\frac{x}{4})^2 &amp;= l^2 \\
+                \left(\frac{x}{4}\right)^2 + \left(\frac{x}{4}\right)^2 &amp;= l^2 \\
+                2\left(\frac{x}{4}\right)^2 &amp;= l^2 \\
                 \frac{x^2}{8} &amp;= l^2 \\
                 \frac{x}{\sqrt{8}} = \frac{\sqrt{2}x}{4} &amp;= l
             \end{split}\]</span></p>
@@ -89,13 +89,16 @@
         <p>
             And so the resulting cube length will be
             <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>4</mn></mfrac></math>
-            of the original square length. I would say that working with 3" by 3" paper works the best, as it results in a cube length of about 1 inch (1.06"). If you don't have access to size of origami paper, you can use Sticky Notes, as they are commonly this size. If you have access to 1' by 1' paper, you can cut sheets in 16ths and have adequate size.
+            of the original square length. I would say that working with 3" by 3" paper works the best, as it results in a cube length of about 1 inch (1.06"). If you don't have access to this size of origami paper, you can use Sticky Notes, as they are commonly this size. If you have access to 1' by 1' paper, you can cut sheets in 16ths and have adequate size.
         </p>
         <p>
-            Level 0 of the Menger Sponge can be made in 5 minutes or so. However, moving to level 1 requires a bit more effort. Level 0 requires 6 units (as there are 6 sides of a cube), but how many units are required for this level? If you are familiar with the Rubik's Cube, I will be using Similar terminology to describe. You can think of going up a level as coring the middle of the cube, you can think of creating 20 copies of the original, and glueing them together. (A Rubik's cube as 12 corners and 8 edges; 20 pieces). However, you can just take 6 and multiply it by 20, as you will be doubling up edges where there needs to be no edges.
+            Level 0 of the menger sponge can be made in 5 minutes or so. However, moving to level 1 requires a bit more effort. Level 0 requires 6 units (as there are 6 sides of a cube), but how many units are required for this level? If you are familiar with the Rubik's cube, I will be using similar terminology to describe. You can think of going up a level as continually popping smaller and smaller holes into the cube, or you can think of it as creating 20 copies of the original, and glueing them together. (A Rubik's cube as 12 corners and 8 edges; 20 pieces). However, by glueing 20 copies together, there will be places where edges aren't needed.
         </p>
         <p>
-            If you look at the fractal image above, you can see there are sides of the structure that if were were glueing together tiny cubes, certain sides would not need to be there. This is how we can calculate the next number of needed units: There are 8 corners and 12 edges. Corners connect to edges in 3 different places, and edges connect to corners in 2. That means, for the 6 sides of a corner, 3 sides are not needed, and for the 6 sides of a edge, 2 sides are not needed. So we can calculate the number like so:
+            If you look at the fractal image above, you can see there are sides of the structure that if we were glueing together complete tiny cubes, certain sides would not need to be there. 
+        </p>
+        <p>
+            So, you can imagine starting a level 1 menger sponge by glueing together 20 cubes. These 20 cubes can be divided into 8 corners and 12 edges. Corners connect to edges in 3 different places, and edges connect to corners in 2. That means, for the 6 sides of a corner (there are 6 sides in a cube), 3 sides are not needed, and for the 6 sides of a edge, 2 sides are not needed. This is because a corner has 3 sides of itself hidden, meaning we don't need to make the units for those places. Similarly, an edge has 2 sides of itself hidden. So we can calculate the number like so:
         </p>
         <div class="math-container">
             <p><span class="math display">\[\begin{split}
