@@ -8,38 +8,33 @@ totalCorrect = 0;
 textBuffer = [];
 
 function getNextWord(){
-    let randomInteger = Math.floor(Math.random() * WordsSize);
+    const randomInteger = Math.floor(Math.random() * WordsSize);
     return WordsList[randomInteger];
 }
 
 function addWordToDom(){
     const nextWord = getNextWord();
     const charList = nextWord.split("");
-    let wordElement = document.createElement("div");
-    wordElement.classList.add("word");
 
-    for( i = 0; i < charList.length; i++){
-        charElement = document.createElement("div");
-        charElement.classList.add("letter");
-        charElement.textContent = charList[i];
-        wordElement.appendChild(charElement);
-    };
-
-    textBuffer.push(nextWord);
-    wordsBox.appendChild( wordElement );
+    let wordElement = '<div class="word">';
+    for( char of charList){
+        wordElement += `<div class="letter">${char}</div>`;
+    }
+    wordsBox.innerHTML += ( wordElement + "</div" );
 }
 
-function readWordsFromFile(){
-    fetch("./words.txt")
-    .then(response => response.text())
-    .then(text => {
-        WordsList = text.split("\n")
+async function readWordsFromFile(){
+    try {
+        const result = await fetch("words.txt");
+        const text = await result.text();
+
+        WordsList = text.split("\n");
         WordsSize = WordsList.length;
-    })
-    .then( () => {
+
         displayWords();
-    })
-    .catch(err => console.log(err));
+    } catch( err ){
+        console.log(err);
+    }
 }
 
 function displayWords(){
@@ -85,24 +80,23 @@ function checkForNewLine( word ){
     lastLine = currentLine;
 }
 
-
-
-
 function deleteRowOfWords(){
-    const finishedWords = document.querySelectorAll(".word");
-    const firstLineHeight = finishedWords[0].getBoundingClientRect().y;
-    var nextLineHeight = firstLineHeight;
-    
-    var toRemove = [];
-    for( i = 0; nextLineHeight == firstLineHeight; i++){
-        const currentWord = finishedWords[i];
-        var nextLineHeight = currentWord.getBoundingClientRect().y;
-        toRemove.push(currentWord);
-    }
+    const words = document.querySelectorAll(".word"),
+          lineXStart = words[0].getBoundingClientRect().x,
+          toRemove = [];
+    var currentX = lineXStart;
 
-    toRemove.pop();
-    toRemove.forEach( ele => ele.remove());
+    words.forEach( word => {
+        if( word.getBoundingClientRect().x > lineXStart){
+            toRemove.push( word);
+        }       
+    });
+
+    toRemove.forEach( element => element.remove());    
 }
+
+
+
 
 function addRowOfWords(){
     for( i = 0; i < 10; i++){
